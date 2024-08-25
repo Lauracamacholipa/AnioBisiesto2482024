@@ -1,15 +1,14 @@
-import sumar from "./sumador";
+import { siElAnioEsBisiesto } from "./aniobisiesto.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const numero = document.querySelector("#primer-numero"); 
+const form = document.querySelector("#aniobisiesto-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const numeroUsr = Number.parseInt(numero.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + siElAnioEsBisiesto(numeroUsr) + "</p>";
 });
+
