@@ -18,5 +18,11 @@ describe("AnioBisiesto", () => {
         expect(siElAnioEsBisiesto(2008)).toEqual("Es año bisiesto");
         expect(siElAnioEsBisiesto(2012)).toEqual("Es año bisiesto");
     });
+
+    it("Todos los años que no son divisibles por 4 NO son años bisiestos", () => {
+        expect(siElAnioEsBisiesto(2017)).toEqual("No es año bisiesto");
+        expect(siElAnioEsBisiesto(2018)).toEqual("No es año bisiesto");
+        expect(siElAnioEsBisiesto(2019)).toEqual("No es año bisiesto");
+    });
 });
 
